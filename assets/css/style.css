@@ -132,7 +132,8 @@ select {
   border: 1px solid var(--ink);
   border-radius: 50% 50% 42% 58%;
   font-family: var(--font-display);
-  font-size: 20px;
+  font-size: 13px;
+  letter-spacing: -0.03em;
   font-style: italic;
   font-weight: 700;
   transform: rotate(-5deg);
@@ -824,6 +825,11 @@ select {
   text-transform: uppercase;
 }
 
+.content-aside a {
+  color: var(--teal-dark);
+  font-weight: 700;
+}
+
 .prose {
   font-size: 17px;
 }
@@ -896,6 +902,10 @@ select {
 .info-card p {
   margin-bottom: 0;
   font-size: 15px;
+}
+
+.prose > .info-card + .info-card {
+  margin-top: 16px;
 }
 
 .publication-list {
