@@ -4,6 +4,8 @@ Personal academic website for Chanwoo Moon, published at <https://urbanking.gith
 
 The site is a dependency-free static GitHub Pages project. It presents current research at KAIST's TUPA Lab, prior education and experience, selected projects and awards, research outputs, and a clearly labeled interactive-materials prototype.
 
+Official KAIST and Yonsei University marks are sourced from each university's official visual-identity page and remain the property of their respective institutions.
+
 ## Pages
 
 - `/` — profile, current research directions, and milestones
