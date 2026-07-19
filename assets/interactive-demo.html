@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Research topics interactive demo</title>
+    <style>
+      :root {
+        --paper: #fffdf8;
+        --ink: #182329;
+        --muted: #647078;
+        --teal: #176c70;
+        --teal-soft: #dcebea;
+        --copper: #b76b3d;
+        --rule: #ded6c9;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans KR", sans-serif;
+      }
+      * { box-sizing: border-box; }
+      body { margin: 0; padding: clamp(22px, 5vw, 46px); background: var(--paper); color: var(--ink); }
+      .demo { max-width: 900px; margin: 0 auto; }
+      .label { margin: 0 0 10px; color: var(--teal); font-size: 11px; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; }
+      h1 { max-width: 650px; margin: 0; font-family: Georgia, serif; font-size: clamp(30px, 5vw, 48px); font-weight: 500; line-height: 1.1; }
+      .intro { max-width: 680px; color: var(--muted); line-height: 1.7; }
+      .controls { display: flex; flex-wrap: wrap; gap: 8px; margin: 26px 0 32px; }
+      button { min-width: 72px; min-height: 42px; padding: 8px 16px; border: 1px solid var(--rule); border-radius: 999px; background: #fff; color: var(--ink); cursor: pointer; font-weight: 700; }
+      button[aria-pressed="true"] { border-color: var(--teal); background: var(--teal); color: #fff; }
+      button:focus-visible { outline: 3px solid var(--copper); outline-offset: 3px; }
+      .chart { display: grid; gap: 20px; padding: clamp(20px, 4vw, 34px); border: 1px solid var(--rule); border-radius: 18px; background: #fff; }
+      .row { display: grid; grid-template-columns: 140px 1fr 52px; gap: 16px; align-items: center; }
+      .row strong { font-size: 13px; }
+      .track { height: 18px; overflow: hidden; border-radius: 999px; background: var(--teal-soft); }
+      .bar { height: 100%; border-radius: inherit; background: linear-gradient(90deg, var(--teal), #55a6a3); transition: width 450ms ease; }
+      .value { color: var(--teal); font-size: 13px; font-weight: 800; text-align: right; }
+      .note { margin: 18px 0 0; color: var(--muted); font-size: 12px; }
+      @media (max-width: 560px) {
+        .row { grid-template-columns: 1fr 44px; gap: 8px; }
+        .track { grid-column: 1 / -1; grid-row: 2; }
+        .value { grid-column: 2; grid-row: 1; }
+      }
+      @media (prefers-reduced-motion: reduce) { .bar { transition: none; } }
+    </style>
+  </head>
+  <body>
+    <main class="demo">
+      <p class="label">Standalone HTML demo</p>
+      <h1>Research topic signals over time</h1>
+      <p class="intro">연도를 선택하면 연구 주제별 예시 비중이 바뀝니다. 아래 수치는 레이아웃 시연을 위한 가상 데이터입니다.</p>
+      <div class="controls" aria-label="연도 선택">
+        <button type="button" data-year="2024" aria-pressed="false">2024</button>
+        <button type="button" data-year="2025" aria-pressed="false">2025</button>
+        <button type="button" data-year="2026" aria-pressed="true">2026</button>
+      </div>
+      <div class="chart" id="chart" aria-live="polite"></div>
+      <p class="note">Demo only · 실제 연구 데이터로 교체해 사용하세요.</p>
+    </main>
+    <script>
+      const datasets = {
+        2024: { "Travel behavior": 62, "Networks": 78, "Artificial intelligence": 45, "Policy": 56 },
+        2025: { "Travel behavior": 71, "Networks": 66, "Artificial intelligence": 68, "Policy": 61 },
+        2026: { "Travel behavior": 82, "Networks": 64, "Artificial intelligence": 91, "Policy": 57 }
+      };
+
+      const chart = document.querySelector("#chart");
+      const buttons = document.querySelectorAll("[data-year]");
+
+      function render(year) {
+        chart.replaceChildren();
+        Object.entries(datasets[year]).forEach(([topic, value]) => {
+          const row = document.createElement("div");
+          row.className = "row";
+          row.innerHTML = `<strong>${topic}</strong><div class="track"><div class="bar" style="width:${value}%"></div></div><span class="value">${value}%</span>`;
+          chart.append(row);
+        });
+        chart.setAttribute("aria-label", `${year}년 연구 주제별 예시 비중`);
+      }
+
+      buttons.forEach((button) => {
+        button.addEventListener("click", () => {
+          buttons.forEach((item) => item.setAttribute("aria-pressed", "false"));
+          button.setAttribute("aria-pressed", "true");
+          render(button.dataset.year);
+        });
+      });
+
+      render("2026");
+    </script>
+  </body>
+</html>

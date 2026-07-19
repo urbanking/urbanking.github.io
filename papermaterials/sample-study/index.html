@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="URBANKING Paper Materials의 인터랙티브 연구 페이지 예시입니다.">
+    <meta name="theme-color" content="#f4efe6">
+    <title>Interactive Research Materials — URBANKING</title>
+    <link rel="canonical" href="https://urbanking.github.io/papermaterials/sample-study/">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <script src="/assets/js/site.js" defer></script>
+  </head>
+  <body class="materials-detail">
+    <a class="skip-link" href="#main-content">본문으로 바로가기</a>
+    <header class="site-header">
+      <div class="site-shell header-inner">
+        <a class="brand" href="/" aria-label="URBANKING 홈"><span class="brand-mark" aria-hidden="true">U</span><span class="brand-text">URBANKING</span></a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation"><span class="sr-only">메뉴 열기</span><span aria-hidden="true"></span><span aria-hidden="true"></span></button>
+        <nav class="site-nav" id="primary-navigation" aria-label="주 메뉴">
+          <a href="/about/">About</a><a href="/research/">Research</a><a href="/publications/">Publications</a><a href="/materials/">Materials</a><a href="/cv/">CV</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <header class="page-hero page-hero-compact site-shell">
+        <p class="eyebrow">Paper materials · Starter example</p>
+        <h1>Interactive Research Materials.</h1>
+        <p>참고 사이트의 AV Review 페이지처럼 연구 설명과 인터랙티브 그래프를 결합한 예시 페이지입니다.</p>
+        <div class="study-meta-strip">
+          <dl class="study-meta-grid">
+            <div><dt>Study</dt><dd>Starter example</dd></div>
+            <div><dt>Format</dt><dd>Interactive HTML</dd></div>
+            <div><dt>Updated</dt><dd>July 2026</dd></div>
+          </dl>
+          <nav class="study-links" aria-label="연구자료 바로가기">
+            <a href="#overview">Abstract</a>
+            <a href="#visualization">Visualization</a>
+            <a href="https://github.com/URBANKING">Code</a>
+          </nav>
+        </div>
+      </header>
+
+      <div class="content-layout site-shell">
+        <aside class="content-aside">
+          <strong>Study links</strong>
+          <a href="/materials/">← 전체 자료</a><br>
+          Paper · Code · Data 링크를 이곳에 추가하세요.
+        </aside>
+        <article class="prose">
+          <h2 id="overview">Overview</h2>
+          <p>
+            이 영역에는 연구의 배경과 질문을 짧게 설명합니다. 독자가 논문을 읽지 않아도
+            왜 이 연구가 필요했고 어떤 데이터를 사용했는지 이해할 수 있게 작성하는 것이 좋습니다.
+          </p>
+
+          <h2>Method</h2>
+          <p>
+            분석 절차, 표본, 주요 변수와 모델을 요약합니다. 자세한 수식보다 결과를 해석하는 데
+            필요한 정보를 먼저 보여주고, 전체 방법론은 논문이나 부록으로 연결할 수 있습니다.
+          </p>
+
+          <h2 id="visualization">Interactive visualization</h2>
+          <p>
+            아래는 별도 서버 없이 GitHub Pages에서 작동하는 독립 실행형 HTML 예시입니다.
+            연도 버튼을 눌러 연구 주제별 예시 비중의 변화를 확인해 보세요.
+          </p>
+          <iframe class="visualization-frame" src="/assets/interactive-demo.html" title="연도별 연구 주제 비중 인터랙티브 데모" loading="lazy"></iframe>
+
+          <div class="callout">
+            실제 Plotly·Bokeh 시각화가 있다면 파일을 <code>assets</code> 폴더에 넣고 위 iframe의 <code>src</code>만 교체하면 됩니다.
+          </div>
+
+          <h2>Citation</h2>
+          <p>저자, 연도, 논문 제목, 저널 또는 학회 정보를 이곳에 넣고 DOI·Paper 링크를 연결하세요.</p>
+        </article>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-shell footer-inner">
+        <div><a class="brand footer-brand" href="/"><span class="brand-mark" aria-hidden="true">U</span><span class="brand-text">URBANKING</span></a><p>Urban mobility, data, and human-centered intelligence.</p></div>
+        <div class="footer-links"><a href="https://github.com/URBANKING">GitHub</a><a href="/materials/">Paper Materials</a><a href="/cv/">CV</a></div>
+        <p class="copyright">© <span data-current-year>2026</span> URBANKING</p>
+      </div>
+    </footer>
+  </body>
+</html>
