@@ -2,23 +2,23 @@
 
 Personal academic website for Chanwoo Moon, published at <https://urbanking.github.io/>.
 
-The site is a dependency-free static GitHub Pages project. It presents current research at KAIST's TUPA Lab, prior education and experience, selected projects and awards, research outputs, and a clearly labeled interactive-materials prototype.
+The site is a dependency-free static GitHub Pages project. It presents current research at KAIST's TUPA Lab, education and experience, projects, publications, and awards.
 
 Official KAIST and Yonsei University marks are sourced from each university's official visual-identity page and remain the property of their respective institutions.
 
 ## Pages
 
-- `/` — profile, current research directions, and milestones
-- `/about/` — research background and working approach
-- `/research/` — active research threads and applied systems
-- `/publications/` — conference presentations, work in progress, and project outputs
-- `/materials/` — public research-materials index
-- `/papermaterials/sample-study/` — interface prototype for future paper materials
-- `/cv/` — education, experience, projects, awards, and technical skills
+English pages live at the root and Korean pages under `/ko/`; the EN / 한국어 switch in the header links each page to its counterpart.
+
+- `/`, `/ko/` — profile, research interests, education and experience, news, publications, and current projects
+- `/research/`, `/ko/research/` — research interests, national R&D projects, and past projects
+- `/publications/`, `/ko/publications/` — papers and presentations
+- `/awards/`, `/ko/awards/` — awards grouped by year
+- `/cv/`, `/ko/cv/` — full CV with links to the English and Korean PDF versions in `/assets/cv/`
 
 ## Privacy
 
-The public website intentionally links only to GitHub and LinkedIn. Private contact details from the source resume are not published.
+The public website links to GitHub and LinkedIn. The CV PDFs include an email address but omit the phone number from the source resume.
 
 ## Deployment
 
