@@ -3,101 +3,128 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Chanwoo Moon's research on LLM agents for travel behavior, cooperative autonomous-driving world models, and trustworthy mobility AI.">
-    <meta name="theme-color" content="#f4efe6">
     <title>Research — Chanwoo Moon</title>
+    <meta name="description" content="Research interests and projects of Chanwoo Moon.">
+    <meta name="theme-color" content="#f5f1e8">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Research — Chanwoo Moon">
+    <meta property="og:description" content="Research interests and projects of Chanwoo Moon.">
+    <meta property="og:url" content="https://urbanking.github.io/research/">
+    <meta property="og:image" content="https://urbanking.github.io/assets/img/chanwoo-moon.jpg">
     <link rel="canonical" href="https://urbanking.github.io/research/">
-    <link rel="stylesheet" href="/assets/css/style.css?v=20260719-logos">
+    <link rel="alternate" hreflang="en" href="https://urbanking.github.io/research/">
+    <link rel="alternate" hreflang="ko" href="https://urbanking.github.io/ko/research/">
+    <link rel="stylesheet" href="/assets/css/style.css?v=20260926b">
     <script src="/assets/js/site.js" defer></script>
   </head>
   <body>
     <a class="skip-link" href="#main-content">Skip to content</a>
     <header class="site-header">
-      <div class="site-shell header-inner">
-        <a class="brand" href="/" aria-label="Chanwoo Moon home"><span class="brand-mark" aria-hidden="true">CM</span><span class="brand-text">CHANWOO MOON</span></a>
-        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation"><span class="sr-only">Open menu</span><span aria-hidden="true"></span><span aria-hidden="true"></span></button>
-        <nav class="site-nav" id="primary-navigation" aria-label="Primary navigation">
-          <a href="/about/">About</a><a href="/research/">Research</a><a href="/publications/">Outputs</a><a href="/materials/">Materials</a><a href="/cv/">CV</a>
-        </nav>
+      <div class="shell header-inner">
+        <a class="brand" href="/">Chanwoo Moon</a>
+        <div class="header-right">
+          <nav class="site-nav" aria-label="Primary navigation">
+          <a href="/research/">Research</a>
+          <a href="/publications/">Publications</a>
+          <a href="/awards/">Awards</a>
+          <a href="/cv/">CV</a>
+          </nav>
+          <div class="lang" aria-label="Language">
+            <a href="/research/" hreflang="en" lang="en" aria-current="true">EN</a>
+            <a href="/ko/research/" hreflang="ko" lang="ko">한국어</a>
+          </div>
+        </div>
       </div>
     </header>
 
-    <main id="main-content">
-      <header class="page-hero site-shell">
-        <p class="eyebrow">Research</p>
-        <h1>Human behavior,<br>agentic AI, and mobility systems.</h1>
-        <p>My work asks how foundation models can support transportation decisions without losing the behavioral structure, uncertainty, and physical context that make mobility difficult.</p>
-      </header>
+    <main id="main-content" class="shell">
+      <h1>Research</h1>
+      <p class="bio">I'm in the first year of my M.S. and working toward research on autonomous driving in mixed traffic.
+        Right now I'm reading the literature, learning traffic simulators such as SUMO and VISSIM,
+        and contributing to the lab's national R&amp;D projects below.</p>
 
-      <div class="content-layout site-shell">
-        <aside class="content-aside">
-          <strong>Lab</strong>
-          TUPA Lab<br>
-          Cho Chun Shik Graduate School of Mobility<br>
-          KAIST
-        </aside>
-        <article class="prose">
-          <h2>01. LLM agents for travel behavior</h2>
-          <p>
-            I design LLM-agent simulations of human travel behavior at the city scale. The core problem is how to extend
-            a small paired stated-preference survey into population-scale social-response experiments for emerging mobility services,
-            including autonomous shuttles and demand-responsive transit.
-          </p>
-          <p>
-            This work continues my Yonsei capstone, where I built an RP–SP integrated simulator for individual-level demand prediction.
-            The pipeline combines personal travel state, retrieval of analogous SP cases, and behavioral alignment to constrain LLM choice generation.
-          </p>
-          <ul class="pill-list"><li>Persona agents</li><li>RP–SP integration</li><li>Choice-set expansion</li><li>Synthetic respondents</li><li>Human alignment</li></ul>
+      <section class="section" aria-labelledby="interests">
+        <h2 id="interests">Interests</h2>
+        <ul class="cv-list">
+          <li><h3>Behavior prediction</h3><p class="sub">Forecasting what surrounding vehicles and pedestrians will do next.</p></li>
+          <li><h3>Motion planning in mixed traffic</h3><p class="sub">Deciding how an automated vehicle should act when it shares intersections with human drivers.</p></li>
+          <li><h3>AI-based transportation simulation</h3><p class="sub">Traffic simulation with learned behavior models and agents, used to train and evaluate driving policies.</p></li>
+          <li><h3>Sim-to-real and closed-loop evaluation</h3><p class="sub">Whether behavior learned in simulation holds on real roads, and testing prediction and planning while the rest of traffic reacts, not only on logged data.</p></li>
+        </ul>
+      </section>
 
-          <h2>02. Cooperative world models</h2>
-          <p>
-            A second research thread studies vehicle–infrastructure cooperative world models for autonomous driving at signalized intersections.
-            The goal is to connect physical scene understanding, infrastructure information, and sequential decision-making in settings where
-            a vehicle cannot safely reason from its own sensors alone.
-          </p>
-          <p>This work is linked to a National Research Foundation of Korea project on Physical AI and cooperative autonomous driving.</p>
-          <ul class="pill-list"><li>Physical AI</li><li>World models</li><li>Signalized intersections</li><li>Cooperative perception</li><li>Model-based RL</li></ul>
+      <section class="section" aria-labelledby="current">
+        <h2 id="current">National R&amp;D projects</h2>
+        <div class="entries">
+          <article class="entry">
+            <div class="entry-head"><h3>Physical AI and Infrastructure-Centered AV Control Framework for Heterogeneous Mixed Autonomous Traffic</h3><span class="when">Aug 2026–present</span></div>
+            <p class="meta">National Research Foundation of Korea (NRF) · Participating researcher</p>
+            <ul>
+              <li>The project studies how automated vehicles can predict surrounding agents and decide their own actions at intersections where they mix with human-driven vehicles.</li>
+              <li>My role: literature review.</li>
+            </ul>
+          </article>
+          <article class="entry">
+            <div class="entry-head"><h3>World Foundation Model-Based E2E Autonomous Driving and Real-Vehicle Global Demonstration</h3><span class="when">Jul 2026–present</span></div>
+            <p class="meta">Korea Technology and Information Promotion Agency for SMEs (TIPA), Global TIPS · Participating researcher</p>
+            <ul>
+              <li>My role: related research and paper writing.</li>
+            </ul>
+          </article>
+          <article class="entry">
+            <div class="entry-head"><h3>Metaverse-Based Virtual Testing Environment and Demonstration Technology for Autonomous Driving</h3><span class="when">May 2026–present</span></div>
+            <p class="meta">Korea Agency for Infrastructure Technology Advancement (KAIA) · Participating researcher</p>
+            <ul>
+              <li>Joined in the final phase of the project; I manage living-lab demonstration data.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
 
-          <h2>03. Trustworthy evaluation</h2>
-          <p>
-            Generating plausible text is not the same as recovering human travel decisions. I therefore evaluate mobility agents against
-            held-out human responses and distinguish individual choice accuracy, aggregate share fit, calibration, and distributional behavior.
-            I am interested in where domain constraints and retrieval improve alignment—and where they create new failure modes.
-          </p>
-          <ul class="pill-list"><li>Held-out evaluation</li><li>Calibration</li><li>Distribution fit</li><li>Robustness</li><li>Reproducibility</li></ul>
+      <section class="section" aria-labelledby="past">
+        <h2 id="past">Past projects</h2>
+        <div class="entries">
+          <article class="entry">
+            <div class="entry-head"><h3>AI-Based Demand Modeling for Autonomous Ride-Hailing</h3><span class="when">Sep 2025–Jul 2026</span></div>
+            <p class="meta">Yonsei capstone, continued at KAIST</p>
+            <ul>
+              <li>Proposed an AI-based framework (persona simulation) for forecasting demand for autonomous ride-hailing and built it as a multi-agent system.</li>
+              <li>Finished the research at KAIST with an evaluation framework, as joint Yonsei–KAIST work; submitted to <em>Transportation Research Part C</em> (under review).</li>
+              <li>Grand Prize, ST–Yonsei Capstone Design; Korean Society of Transportation President's Award for top capstone.</li>
+            </ul>
+          </article>
+          <article class="entry">
+            <div class="entry-head"><h3>Marketing Solution Agent for Small Merchants<span class="tag">13th BigContest</span></h3><span class="when">Sep–Dec 2025</span></div>
+            <p class="meta">AI Data Utilization Track · Best Award, KAIT President's Award (2nd of 500+ teams)</p>
+            <ul>
+              <li>Built a multi-agent LLM system that diagnoses each merchant's situation from card-sales, foot-traffic, and street-view data and recommends tailored marketing strategies.</li>
+            </ul>
+          </article>
+          <article class="entry">
+            <div class="entry-head"><h3>RAG Agent for Counseling-Record Analysis<span class="tag">Upstage</span></h3><span class="when">May–Jun 2025</span></div>
+            <p class="meta">Industry–academia project with Upstage</p>
+            <ul>
+              <li>Parsed and anonymized scanned counseling-record PDFs, retrieved similar cases, and classified risk level and abuse type with an LLM agent (Upstage Document Parse, Solar LLM, FAISS).</li>
+              <li>Added automatic alerts for high-risk cases and a Streamlit monitoring dashboard.</li>
+            </ul>
+          </article>
+          <article class="entry">
+            <div class="entry-head"><h3>Namdaemun Market Night-Time Revitalization<span class="tag">12th BigContest</span></h3><span class="when">Sep–Dec 2024</span></div>
+            <p class="meta">Data Analysis Track · Best Award, KAIT President's Award (2nd of 200+ teams)</p>
+            <ul>
+              <li>Used SKT mobility (OD), commercial, and parking data to find the problem (visitors leaving in the evening), trace its causes (early closing, parking shortage), and propose solutions (a night-market district and new parking sites).</li>
+            </ul>
+          </article>
+        </div>
+      </section>
 
-          <h2>Selected applied systems</h2>
-          <div class="info-grid">
-            <section class="info-card">
-              <h3>Multimodal retail analytics</h3>
-              <p>Led a five-agent system combining Gemini-VLM street panoramas with mobility, commercial-zone, sales, review, and place data for Seongdong-gu.</p>
-            </section>
-            <section class="info-card">
-              <h3>GraphRAG insurance agents</h3>
-              <p>Built a graph retrieval layer for underwriting, pricing, and explanation agents to reason consistently over policy knowledge.</p>
-            </section>
-            <section class="info-card">
-              <h3>Urban hollowing-out analytics</h3>
-              <p>Fused mobility, foot-traffic, and commercial data to model night-time activity decline and propose transit interventions.</p>
-            </section>
-            <section class="info-card">
-              <h3>Spatial accessibility</h3>
-              <p>Developed multimodal accessibility indicators for vacancy prediction and startup–investor spatial matching.</p>
-            </section>
-          </div>
 
-          <div class="callout">
-            <strong>Research status:</strong> these are active or completed research projects. Formal journal publications will be listed only after they are publicly available.
-          </div>
-        </article>
-      </div>
     </main>
 
     <footer class="site-footer">
-      <div class="site-shell footer-inner">
-        <div><a class="brand footer-brand" href="/"><span class="brand-mark" aria-hidden="true">CM</span><span class="brand-text">CHANWOO MOON</span></a><p>Mobility AI, travel behavior, and cooperative intelligent systems.</p></div>
-        <div class="footer-links"><a href="https://github.com/urbanking">GitHub</a><a href="https://www.linkedin.com/in/chanwoo-moon-48a9a2341/">LinkedIn</a><a href="/cv/">CV</a></div>
-        <p class="copyright">© <span data-current-year>2026</span> Chanwoo Moon</p>
+      <div class="shell footer-inner">
+        <span>© <span data-current-year>2026</span> Chanwoo Moon</span>
+        <span><a href="https://github.com/urbanking">GitHub</a> · <a href="https://www.linkedin.com/in/chanwoo-moon-48a9a2341/">LinkedIn</a></span>
       </div>
     </footer>
   </body>
