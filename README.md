@@ -10,7 +10,7 @@ Official KAIST and Yonsei University marks are sourced from each university's of
 
 English pages live at the root and Korean pages under `/ko/`; the EN / 한국어 switch in the header links each page to its counterpart.
 
-- `/`, `/ko/` — profile, research interests, education and experience, news, publications, and current projects
+- `/`, `/ko/` — profile, research interests, education and experience, publications, and current projects
 - `/research/`, `/ko/research/` — research interests, national R&D projects, and past projects
 - `/publications/`, `/ko/publications/` — research papers
 - `/awards/`, `/ko/awards/` — awards grouped by year
