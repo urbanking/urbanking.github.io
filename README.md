@@ -12,7 +12,7 @@ English pages live at the root and Korean pages under `/ko/`; the EN / 한국어
 
 - `/`, `/ko/` — profile, research interests, education and experience, news, publications, and current projects
 - `/research/`, `/ko/research/` — research interests, national R&D projects, and past projects
-- `/publications/`, `/ko/publications/` — papers and presentations
+- `/publications/`, `/ko/publications/` — research papers
 - `/awards/`, `/ko/awards/` — awards grouped by year
 - `/cv/`, `/ko/cv/` — full CV with links to the English and Korean PDF versions in `/assets/cv/`
 
